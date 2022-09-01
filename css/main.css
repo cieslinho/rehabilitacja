@@ -55,15 +55,59 @@ body {
      object-fit: contain;
 }
 
-.nav__btn {
-  background-color: transparent;
-  border: none;
-  padding: 0.5em;
+.nav .burger-btn {
+  padding: 0.8em;
   cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  overflow: hidden;
 }
 
-.nav__btn svg {
-  color: #fff;
+.nav .burger-btn:hover .burger-btn__bars::after,
+.nav .burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+
+.nav .burger-btn:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.nav .burger-btn__box {
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
+
+.nav .burger-btn__bars, .nav .burger-btn__bars::after, .nav .burger-btn__bars::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.nav .burger-btn__bars {
+  top: 0;
+  width: 100%;
+}
+
+.nav .burger-btn__bars::after {
+  top: 8px;
+  width: 70%;
+}
+
+.nav .burger-btn__bars::before {
+  top: 16px;
+  width: 50%;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 .nav__listMobile {
@@ -86,6 +130,17 @@ body {
   background-color: #3a86ff;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.nav__listMobile-active {
+  right: 0;
+  top: 90px;
+  opacity: 1;
+  -webkit-box-shadow: 0px 1px 8px -3.5px black;
+          box-shadow: 0px 1px 8px -3.5px black;
+  visibility: visible;
 }
 
 .nav__itemMobile {
@@ -96,14 +151,5 @@ body {
   text-align: center;
   text-decoration: none;
   color: #fff;
-}
-
-.nav .active {
-  right: 0;
-  top: 90px;
-  opacity: 1;
-  -webkit-box-shadow: 0px 1px 8px -3.5px black;
-          box-shadow: 0px 1px 8px -3.5px black;
-  visibility: visible;
 }
 /*# sourceMappingURL=main.css.map */
