@@ -1,5 +1,6 @@
 .container {
 	margin: 0 auto;
+	padding: 0 1em;
 	width: 100%;
 	max-width: 1200px;
 }
@@ -51,7 +52,6 @@
 	position: relative;
 	margin-bottom: 2em;
 	font-size: 3rem;
-	// font-weight: 300;
 	text-transform: uppercase;
 	text-align: center;
 	color: $mainColor;
@@ -59,7 +59,7 @@
 }
 
 .section-padding {
-	padding: 6em 2em;
+	padding: 3em 0em;
 }
 
 @media (min-width: 768px) {
@@ -67,14 +67,11 @@
 		font-size: 3.6rem;
 	}
 	.section-padding {
-		padding: 8em 2em;
+		padding: 5em 1em;
 	}
 }
 @media (min-width: 992px) {
 	.section-title {
 		font-size: 4.3rem;
-	}
-	.section-padding {
-		padding: 10em 2em;
 	}
 }
