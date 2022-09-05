@@ -6,3 +6,11 @@
 	background-color: #fff;
 	transition: width 0.3s;
 }
+
+@mixin heroImages($bgImg) {
+	background-image: $heroShadow, url($bgImg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: left center;
+	background-repeat: no-repeat;
+}

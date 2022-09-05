@@ -20,17 +20,10 @@ html {
 body {
 	font-size: 1.6rem;
 	font-family: 'Roboto', sans-serif;
-	background-color: #fff;
+	background-color: $pureWhite;
 }
 
 // basic classess
-
-.container {
-	margin: 0 auto;
-	padding: 0 1em;
-	width: 100%;
-	max-width: 1400px;
-}
 
 // nav
 
@@ -38,8 +31,9 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: #3a86ff;
+	background-color: $mainColor;
 	box-shadow: 0px 3px 5px -2.5px rgba(0, 0, 0, 1);
+	z-index: 9999999;
 	&__navbar {
 		position: relative;
 		display: flex;
@@ -48,11 +42,13 @@ body {
 		height: 70px;
 	}
 	&__logo {
+		margin-left: 0.5em;
 		width: 100%;
 		height: 60px;
 		object-fit: contain;
 	}
 	.burger-btn {
+		margin-right: 0.5em;
 		padding: 0.8em;
 		cursor: pointer;
 		border: 1px solid transparent;
@@ -97,7 +93,7 @@ body {
 	}
 	&__listMobile {
 		position: absolute;
-		right: 0;
+		right: 10px;
 		top: 90px;
 		padding: 0.5em 0;
 		display: flex;
@@ -106,7 +102,7 @@ body {
 		justify-content: center;
 		position: absolute;
 		border-radius: 5px;
-		background-color: #3a86ff;
+		background-color: $mainColor;
 		visibility: hidden;
 		opacity: 0;
 		transition: opacity 0.2s;
@@ -123,24 +119,169 @@ body {
 		min-height: 2.5em;
 		width: 100%;
 		text-align: center;
+		text-transform: uppercase;
 		text-decoration: none;
-		color: #fff;
+		color: $pureWhite;
+		font-size: 1.4rem;
+		font-weight: 700;
+		transition: border-bottom 0.15s, background-color 0.15s;
+		&:hover {
+			background-color: rgba($pureWhite, $alpha: 0.2);
+			box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+		}
 	}
 	&__listDesktop {
-		display: flex;
+		display: none;
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		margin: auto;
 	}
 	&__itemDesktop {
 		padding: 1em 2em;
+		text-decoration: none;
+		color: $pureWhite;
+		font-size: 1.4rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		transition: border-bottom 0.15s, background-color 0.15s;
+		&:hover {
+			background-color: rgba($pureWhite, $alpha: 0.2);
+			box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+		}
 	}
 }
+
+// Header
+
+.header {
+	position: relative;
+	padding: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 75vh;
+	text-align: center;
+	color: $pureWhite;
+	@include heroImages('../img/fizjohq.jpg');
+	background-attachment: scroll;
+	&__title {
+		margin-bottom: 0.25em;
+		font-weight: 300;
+		font-size: 4rem;
+		text-shadow: 0px 3px 4px rgba(0, 0, 0, 1);
+	}
+	&__subtitle {
+		font-weight: 300;
+		font-size: 3rem;
+		text-shadow: 0px 3px 4px rgba(0, 0, 0, 1);
+	}
+
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4rem;
+		background: $pureWhite;
+		border: none;
+		border-radius: 8px;
+		color: $dark;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&::before {
+			background-color: $light-white;
+		}
+	}
+}
+
+// about-me
+
+.aboutme {
+	// background-color: #ffffff;
+	// background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233a86ff' fill-opacity='0.33'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__textbox {
+		margin-bottom: 2em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: $dark;
+		text-align: center;
+	}
+	&__title {
+		font-size: 4rem;
+		font-weight: 700;
+		margin-bottom: 0.3em;
+	}
+
+	&__subtitle {
+		margin-bottom: 0.5em;
+	}
+
+	&__img {
+		width: 200px;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+}
+
+// ////////////////////////
+// MEDIA
+// ///////////////////////
 
 @media (min-width: 768px) {
 	.nav {
 		.burger-btn {
 			display: none;
+		}
+		&__listMobile {
+			display: none;
+		}
+		&__listDesktop {
+			display: flex;
+		}
+	}
+	.header {
+		&__title {
+			font-size: 4.5rem;
+		}
+		&__subtitle {
+			font-size: 3.5rem;
+		}
+		&__btn {
+			font-size: 1.5rem;
+		}
+	}
+	.aboutme {
+		&__box {
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+		&__textbox {
+			align-items: flex-start;
+			text-align: left;
+			width: 50%;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.header {
+		&__title {
+			font-size: 4.9rem;
+		}
+		&__subtitle {
+			font-size: 3.9rem;
 		}
 	}
 }
