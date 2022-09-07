@@ -27,6 +27,7 @@
 }
 
 .btn-special-animation {
+  font-family: 'Roboto', sans-serif;
   position: relative;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -599,6 +600,7 @@ body {
 .offer__option-btn {
   margin-top: 1em;
   padding: 0.8em;
+  font-size: 1.6rem;
   width: 100%;
   color: #fff;
   background-color: #3a86ff;
@@ -614,6 +616,7 @@ body {
 .offer__btn {
   margin-top: 2em;
   padding: 0.8em 1.6em;
+  font-size: 1.7rem;
   border-radius: 8px;
   border: none;
   color: #fff;
@@ -639,11 +642,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 8px;
-  margin-right: 1.5em;
   -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
   transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
   transition: transform 0.3s, box-shadow 0.3s;
   transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  -webkit-box-shadow: 0px 1px 8px -3.5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 1px 8px -3.5px rgba(0, 0, 0, 0.5);
 }
 
 .courses__box:hover {
@@ -688,6 +692,8 @@ body {
 }
 
 .courses__box-info {
+  width: 100%;
+  padding: 0.5em;
   position: absolute;
   top: 70%;
   left: 50%;
@@ -701,6 +707,7 @@ body {
 
 .courses__box-title {
   color: #fff;
+  font-size: 1.8rem;
   text-align: center;
 }
 
@@ -715,6 +722,151 @@ body {
 
 .slick-slide {
   height: auto;
+  margin: 1.5em;
+}
+
+.gallery__accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gallery__accordion-btn {
+  padding: 1em;
+  width: 100%;
+  border: none;
+  font-size: 1.7rem;
+  border-radius: 8px;
+  background-color: #2e2e2e;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.gallery__accordion-btn::before {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.gallery__accordion-btn i {
+  margin-right: 1.3em;
+}
+
+.gallery__boxes {
+  display: none;
+  margin-top: 1em;
+  max-width: 100%;
+}
+
+.gallery__boxes-item {
+  margin: 1em;
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.gallery__boxes-item:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.gallery__boxes-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__form-top, .contact__form-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__form-label {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.contact__form-input {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  background-color: #eee;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+
+.contact__form-textarea {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  background-color: #eee;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact__form-btn {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 1em;
+  width: 100%;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  max-width: 300px;
+  color: #fff;
+  background-color: #3a86ff;
+  cursor: pointer;
+}
+
+.contact__form-btn::before {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 576px) {

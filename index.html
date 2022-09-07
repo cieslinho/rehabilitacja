@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="dist/lightbox.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -292,13 +293,105 @@
         <section id="gallery" class="gallery section-padding">
             <div class="container">
                 <h2 class="section-title">galeria</h2>
+                <div class="gallery__accordion">
+                    <button class="gallery__accordion-btn btn-special-animation">
+                        <i class="ti ti-menu-2"></i>
+                        zobacz zdjęcia
+                    </button>
+                    <div class="gallery__boxes">
+                        <div class="gallery__boxes-item">
+                            <a href="img/offers/offer7lq.jpg" data-lightbox="roadtrip" class="gallery__boxes-link">
+                                <img src="./img/offers/offer7lq.jpg" alt=" zdjecie fizjoterapia galeria"
+                                    class="gallery__boxes-img">
+                            </a>
+                        </div>
+                        <div class="gallery__boxes-item">
+                            <a href="img/offers/offer7lq.jpg" data-lightbox="roadtrip" class="gallery__boxes-link">
+                                <img src="./img/offers/offer7lq.jpg" alt=" zdjecie fizjoterapia galeria"
+                                    class="gallery__boxes-img">
+                            </a>
+                        </div>
+                        <div class="gallery__boxes-item">
+                            <a href="img/offers/offer7lq.jpg" data-lightbox="roadtrip" class="gallery__boxes-link">
+                                <img src="./img/offers/offer7lq.jpg" alt=" zdjecie fizjoterapia galeria"
+                                    class="gallery__boxes-img">
+                            </a>
+                        </div>
+                        <div class="gallery__boxes-item">
+                            <a href="img/offers/offer7lq.jpg" data-lightbox="roadtrip" class="gallery__boxes-link">
+                                <img src="./img/offers/offer7lq.jpg" alt=" zdjecie fizjoterapia galeria"
+                                    class="gallery__boxes-img">
+                            </a>
+                        </div>
+                        <div class="gallery__boxes-item">
+                            <a href="img/offers/offer7lq.jpg" data-lightbox="roadtrip" class="gallery__boxes-link">
+                                <img src="./img/offers/offer7lq.jpg" alt=" zdjecie fizjoterapia galeria"
+                                    class="gallery__boxes-img">
+                            </a>
+                        </div>
+                        <div class="gallery__boxes-item">
+                            <a href="img/offers/offer7lq.jpg" data-lightbox="roadtrip" class="gallery__boxes-link">
+                                <img src="./img/offers/offer7lq.jpg" alt=" zdjecie fizjoterapia galeria"
+                                    class="gallery__boxes-img">
+                            </a>
+                        </div>
+                        <div class="gallery__boxes-item">
+                            <a href="img/offers/offer7lq.jpg" data-lightbox="roadtrip" class="gallery__boxes-link">
+                                <img src="./img/offers/offer7lq.jpg" alt=" zdjecie fizjoterapia galeria"
+                                    class="gallery__boxes-img">
+                            </a>
+                        </div>
+                        <div class="gallery__boxes-item">
+                            <a href="img/offers/offer7lq.jpg" data-lightbox="roadtrip" class="gallery__boxes-link">
+                                <img src="./img/offers/offer7lq.jpg" alt=" zdjecie fizjoterapia galeria"
+                                    class="gallery__boxes-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <h2 class="section-title">kontakt</h2>
+                <form action="" class="contact__form">
+                    <div class="contact__form-top">
+                        <label for="name" class="contact__form-label">Imię i nazwisko:</label>
+                        <input type="text" class="contact__form-input" id="name">
+                        <label for="email" class="contact__form-label">Adres e-mail:</label>
+                        <input type="text" class="contact__form-input" id="email">
+                        <label for="mobile" class="contact__form-label">Telefon:</label>
+                        <input type="text" class="contact__form-input" id="mobile" name="mobile">
+                    </div>
+                    <div class="contact__form-bottom">
+                        <label for="msg" class="contact__form-label">Wiadomość:</label>
+                        <textarea id="msg" class="contact__form-textarea"></textarea>
+                    </div>
+                    <button class="contact__form-btn btn-special-animation" type="submit">wyślij</button>
+                </form>
             </div>
         </section>
 
+
+
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__boxes">
+                <div class="footer__box">
+                    <h3 class="footer__box-title"></h3>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <p class="footer__bottom-text">&copy; <span class="footer__year"></span>| Szymon Cieśla</p>
+    </footer>
+
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./dist/lightbox.js"></script>
     <script src="./js/slick.js"></script>
     <script src="./js/main.js"></script>
 </body>
