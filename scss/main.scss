@@ -214,10 +214,11 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		color: $dark;
+		color: $pureWhite;
+		text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
 		text-align: center;
-		background-color: rgba($mainColor, $alpha: 0.6);
-		box-shadow: 0px 1px 8px -3.5px rgba(0, 0, 0, 1);
+		background-color: rgba($mainColor, $alpha: 0.8);
+		box-shadow: 0px 1px 8px -3.5px rgba(0, 0, 0, 0.5);
 		border-radius: 8px;
 	}
 	&__title {
@@ -240,41 +241,257 @@ body {
 
 // section features
 .features {
+	&__box {
+		position: relative;
+		margin: 1em 0;
+		height: 450px;
+		color: $pureWhite;
+		text-align: center;
+		perspective: 1000px;
+		&:hover {
+			.features__box-img {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
+			.features__box-info {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
+		&-img {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			padding: 2em;
+			height: 100%;
+			border-radius: 8px;
+			background-size: cover;
+			background-position: center;
+			transition: transform 1s, opacity 1s;
+			box-shadow: 0px 1px 8px -3.5px rgba(0, 0, 0, 0.5);
+
+			&--first {
+				background-image: $heroShadow, url('../img/card1lq.jpg');
+			}
+			&--second {
+				background-image: $heroShadow, url('../img/card2lq.jpg');
+			}
+			&--third {
+				background-image: $heroShadow, url('../img/card3lq.jpg');
+			}
+			&--fourth {
+				background-image: $heroShadow, url('../img/card4lq.jpg');
+			}
+			&-icon {
+				font-size: 4rem;
+				margin-bottom: 1em;
+			}
+
+			&-title {
+				font-size: 2.8rem;
+			}
+			&-info {
+				position: absolute;
+				bottom: 30px;
+				right: 30px;
+				font-size: 1.5rem;
+				i {
+					margin-right: 0.3em;
+				}
+			}
+		}
+
+		&-info {
+			position: absolute;
+			padding: 2em;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			background-color: rgba($mainColor, $alpha: 0.8);
+			border-radius: 8px;
+			opacity: 0;
+			transform: rotateY(180deg);
+			transition: transform 1s, opacity 1s;
+			box-shadow: 0px 1px 8px -3.5px rgba(0, 0, 0, 0.5);
+			&-description {
+				padding: 2em;
+				font-size: 1.7rem;
+			}
+		}
+	}
+}
+// section offer
+
+.offer {
 	&__boxes {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 	}
-	&__box {
-		padding: 2em 0.8em;
-		margin-bottom: 0.5em;
+	&__option {
 		display: flex;
+		justify-content: center;
 		flex-direction: column;
-		align-items: center;
-		justify-content: space-evenly;
-		width: 270px;
-		height: 400px;
-		background-color: rgba($mainColor, $alpha: 0.6);
-		border-radius: 8px;
-		text-align: center;
-		&-icon {
-			font-size: 4rem;
+		margin: 1em 0;
+		box-shadow: 0px 1px 8px -3.5px rgba(0, 0, 0, 0.5);
+		overflow: hidden;
+		color: $dark;
+		&-img {
+			width: 100%;
+			object-fit: cover;
+			transition: transform 0.3s;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+		&-info {
+			background-color: $pureWhite;
+			z-index: 10;
+			padding: 2em;
+			width: 100%;
 		}
 		&-title {
-			font-size: 1.8rem;
-			text-transform: uppercase;
-			font-weight: 700;
+			margin-bottom: 0.5em;
+			font-size: 2.2rem;
 		}
 		&-description {
-			font-weight: 300;
+			margin-bottom: 0.5em;
+			font-size: 1.5rem;
+		}
+		&-price {
+			margin-bottom: 0.5em;
+			font-size: 2rem;
+		}
+		&-btn {
+			margin-top: 1em;
+			padding: 0.8em;
+			width: 100%;
+			color: $pureWhite;
+			background-color: $mainColor;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+
+			&::before {
+				background-color: rgba($pureWhite, $alpha: 0.1);
+			}
 		}
 	}
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		border-radius: 8px;
+		border: none;
+		color: $pureWhite;
+		background-color: $dark;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&::before {
+			background-color: rgba($pureWhite, $alpha: 0.1);
+		}
+	}
+}
+
+// section courses
+.courses {
+	&__box {
+		position: relative;
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 8px;
+		margin-right: 1.5em;
+		transition: transform 0.3s, box-shadow 0.3s;
+
+		&:hover {
+			transform: scale(0.95);
+			box-shadow: 0px 1px 8px -3.5px rgba(0, 0, 0, 0.5);
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.8);
+			border-radius: 8px;
+			z-index: 2;
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+		}
+		&:hover::before {
+			opacity: 1;
+		}
+		&:hover .courses__box-info {
+			opacity: 1;
+		}
+		&-img {
+			margin: auto;
+			width: 100%;
+			img {
+				margin: 0 auto;
+				object-fit: contain;
+				width: 100%;
+				height: auto;
+			}
+		}
+		&-info {
+			position: absolute;
+			top: 70%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 5;
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+		}
+		&-title {
+			color: $pureWhite;
+			text-align: center;
+		}
+	}
+}
+
+.slick-track {
+	align-items: stretch;
+	display: flex; // or @include flexbox if you're using the flexbox mixin
+}
+
+.slick-slide {
+	// align-items: stretch only works if the child height is undefined/auto!
+	// slick slider's default is to give it height: 100%, which messes everything up
+	height: auto;
 }
 
 // ////////////////////////
 // MEDIA
 // ///////////////////////
+
+@media (min-width: 576px) {
+	.offer {
+		&__option {
+			flex-direction: row;
+			&-img {
+				width: 50%;
+			}
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 50%;
+			}
+			&-title {
+				font-size: 2.5rem;
+			}
+		}
+	}
+}
 
 @media (min-width: 768px) {
 	.nav {
@@ -312,11 +529,27 @@ body {
 	}
 	.features {
 		&__boxes {
-			flex-direction: row;
+			display: flex;
+			justify-content: center;
 			flex-wrap: wrap;
 		}
 		&__box {
-			margin-right: 1.3em;
+			margin: 1em;
+			width: 40%;
+			&-img {
+				&--first {
+					background-image: $heroShadow, url('../img/card1.jpg');
+				}
+				&--second {
+					background-image: $heroShadow, url('../img/card2.jpg');
+				}
+				&--third {
+					background-image: $heroShadow, url('../img/card3.jpg');
+				}
+				&--fourth {
+					background-image: $heroShadow, url('../img/card4.jpg');
+				}
+			}
 		}
 	}
 }
@@ -327,6 +560,14 @@ body {
 		}
 		&__subtitle {
 			font-size: 3.9rem;
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.features {
+		&__box {
+			width: 33%;
 		}
 	}
 }

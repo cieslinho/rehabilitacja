@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -28,7 +29,6 @@
                 <div class="nav__listMobile">
                     <a href="#aboutme" class="nav__itemMobile">O mnie</a>
                     <a href="#offer" class="nav__itemMobile">Oferta</a>
-                    <a href="#pricing" class="nav__itemMobile">Cennik</a>
                     <a href="#courses" class="nav__itemMobile">Kursy</a>
                     <a href="#gallery" class="nav__itemMobile">Galeria</a>
                     <a href="#contact" class="nav__itemMobile">Kontakt</a>
@@ -36,7 +36,6 @@
                 <div class="nav__listDesktop">
                     <a href="#aboutme" class="nav__itemDesktop">O mnie</a>
                     <a href="#offer" class="nav__itemDesktop">Oferta</a>
-                    <a href="#pricing" class="nav__itemDesktop">Cennik</a>
                     <a href="#courses" class="nav__itemDesktop">Kursy</a>
                     <a href="#gallery" class="nav__itemDesktop">Galeria</a>
                     <a href="#contact" class="nav__itemDesktop">Kontakt</a>
@@ -72,43 +71,235 @@
             <div class="container">
                 <h2 class="section-title">co nas wyróżnia</h2>
                 <div class="features__boxes">
-                    <div class="features__box">
-                        <i class="ti ti-user-circle features__box-icon"></i>
-                        <p class="features__box-title">zdrowe i szczęśliwe dziecko</p>
-                        <p class="features__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                            deserunt omnis sapiente eum eligendi soluta ullam quia, obcaecati voluptas, saepe pariatur,
-                            explicabo repudiandae impedit delectus asperiores dolorem eveniet minus praesentium.</p>
+                    <div class="features__box" onclick="void(0)">
+                        <div class="features__box-img features__box-img--first">
+                            <i class="ti ti-user-circle features__box-img-icon"></i>
+                            <h3 class="features__box-img-title">Zdrowe i szczęśliwe dziecko</h3>
+                            <p class="features__box-img-info">
+                                <i class="ti ti-chevrons-right"></i>
+                                Więcej informacji
+                            </p>
+                        </div>
+                        <div class="features__box-info">
+                            <p class="features__box-info-description">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aperiam quas quaerat minima? Sit alias aliquid possimus fuga error
+                                eligendi aspernatur hic! Doloribus ipsa officia nostrum quas, commodi velit sint ex.
+                            </p>
+                        </div>
                     </div>
-                    <div class="features__box">
-                        <i class="ti ti-user-circle features__box-icon"></i>
-                        <p class="features__box-title">zdrowe i szczęśliwe dziecko</p>
-                        <p class="features__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                            deserunt omnis sapiente eum eligendi soluta ullam quia, obcaecati voluptas, saepe pariatur,
-                            explicabo repudiandae impedit delectus asperiores dolorem eveniet minus praesentium.</p>
+                    <div class="features__box" onclick="void(0)">
+                        <div class="features__box-img features__box-img--second">
+                            <i class="ti ti-building features__box-img-icon"></i>
+                            <h3 class="features__box-img-title">Dostępność</h3>
+                            <p class="features__box-img-info">
+                                <i class="ti ti-chevrons-right"></i>
+                                Więcej informacji
+                            </p>
+                        </div>
+                        <div class="features__box-info">
+                            <p class="features__box-info-description">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aperiam quas quaerat minima? Sit alias aliquid possimus fuga error
+                                eligendi aspernatur hic! Doloribus ipsa officia nostrum quas, commodi velit sint ex.
+                            </p>
+                        </div>
                     </div>
-                    <div class="features__box">
-                        <i class="ti ti-user-circle features__box-icon"></i>
-                        <p class="features__box-title">zdrowe i szczęśliwe dziecko</p>
-                        <p class="features__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                            deserunt omnis sapiente eum eligendi soluta ullam quia, obcaecati voluptas, saepe pariatur,
-                            explicabo repudiandae impedit delectus asperiores dolorem eveniet minus praesentium.</p>
+                    <div class="features__box" onclick="void(0)">
+                        <div class="features__box-img features__box-img--third">
+                            <i class="ti ti-home features__box-img-icon"></i>
+                            <h3 class="features__box-img-title">Fizjoterapia w Twoim domu</h3>
+                            <p class="features__box-img-info">
+                                <i class="ti ti-chevrons-right"></i>
+                                Więcej informacji
+                            </p>
+
+                        </div>
+                        <div class="features__box-info">
+                            <p class="features__box-info-description">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aperiam quas quaerat minima? Sit alias aliquid possimus fuga error
+                                eligendi aspernatur hic! Doloribus ipsa officia nostrum quas, commodi velit sint ex.
+                            </p>
+                        </div>
                     </div>
-                    <div class="features__box">
-                        <i class="ti ti-user-circle features__box-icon"></i>
-                        <p class="features__box-title">zdrowe i szczęśliwe dziecko</p>
-                        <p class="features__box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                            deserunt omnis sapiente eum eligendi soluta ullam quia, obcaecati voluptas, saepe pariatur,
-                            explicabo repudiandae impedit delectus asperiores dolorem eveniet minus praesentium.</p>
+                    <div class="features__box" onclick="void(0)">
+                        <div class="features__box-img features__box-img--fourth">
+                            <i class="ti ti-physotherapist features__box-img-icon"></i>
+                            <h3 class="features__box-img-title">Infrastruktura</h3>
+                            <p class="features__box-img-info">
+                                <i class="ti ti-chevrons-right"></i>
+                                Więcej informacji
+                            </p>
+
+                        </div>
+                        <div class="features__box-info">
+                            <p class="features__box-info-description">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aperiam quas quaerat minima? Sit alias aliquid possimus fuga error
+                                eligendi aspernatur hic! Doloribus ipsa officia nostrum quas, commodi velit sint ex.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="offer" class="offer section-padding">
+            <div class="container">
+                <h2 class="section-title">Oferta</h2>
+                <div class="offer__boxes">
+                    <div class="offer__option">
+                        <img src="./img/offers/offer1lq.jpg"
+                            alt="Fizjoterapia, Małgorzata Cieśla fizjoterapeutka, rehabilitacja"
+                            class="offer__option-img">
+                        <div class="offer__option-info">
+                            <h3 class="offer__option-title">Terapia PNF</h3>
+                            <p class="offer__option-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Iure fuga quae dolorum molestias, possimus earum cumque vitae praesentium?
+                                Officia, harum!</p>
+                            <p class="offer__option-price">70<i class="ti ti-currency-zloty"></i></p>
+                            <a href="#contact" class="offer__option-link">
+                                <button class="offer__option-btn btn-special-animation">Wybierz</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="offer__option">
+                        <img src="./img/offers/offer2lq.jpg"
+                            alt="Fizjoterapia, Małgorzata Cieśla fizjoterapeutka, rehabilitacja"
+                            class="offer__option-img">
+                        <div class="offer__option-info">
+                            <h3 class="offer__option-title">Terapia NDT-Bobath</h3>
+                            <p class="offer__option-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Iure fuga quae dolorum molestias, possimus earum cumque vitae praesentium?
+                                Officia, harum!</p>
+                            <p class="offer__option-price">70<i class="ti ti-currency-zloty"></i></p>
+                            <a href="#contact" class="offer__option-link">
+                                <button class="offer__option-btn btn-special-animation">Wybierz</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="offer__option">
+                        <img src="./img/offers/offer3lq.jpg"
+                            alt="Fizjoterapia, Małgorzata Cieśla fizjoterapeutka, rehabilitacja"
+                            class="offer__option-img">
+                        <div class="offer__option-info">
+                            <h3 class="offer__option-title">Terapia Tkanek Miękkich</h3>
+                            <p class="offer__option-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Iure fuga quae dolorum molestias, possimus earum cumque vitae praesentium?
+                                Officia, harum!</p>
+                            <p class="offer__option-price">70<i class="ti ti-currency-zloty"></i></p>
+                            <a href="#contact" class="offer__option-link">
+                                <button class="offer__option-btn btn-special-animation">Wybierz</button>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="offer__btn btn-special-animation">zobacz więcej</button>
+                </div>
+            </div>
+        </section>
+        <section id="courses" class="courses section-padding">
+            <div class="container">
+                <h2 class="section-title">kursy</h2>
+                <div class="courses__boxes">
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/fizjoterapiaoddechowa.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
+                    </div>
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/wanda1.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
+                    </div>
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/wanda2.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
+                    </div>
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/sucheiglowanie.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
+                    </div>
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/kif.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
+                    </div>
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/ndtbobath.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
+                    </div>
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/pnf.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
+                    </div>
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/pnfskoliozy.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
+                    </div>
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/taping1.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
+                    </div>
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/taping2.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
+                    </div>
+                    <div class="courses__box">
+                        <div class="courses__box-img">
+                            <img src="./img/courses/traumaprenatalna.png" alt="fizjoterapia oddechowa">
+                        </div>
+                        <div class="courses__box-info">
+                            <p class="courses__box-title">Fizjoterapia oddechowa w pediatrii</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-
         </section>
+
+        <section id="gallery" class="gallery section-padding">
+            <div class="container">
+                <h2 class="section-title">galeria</h2>
+            </div>
+        </section>
+
     </main>
-
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slick.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
