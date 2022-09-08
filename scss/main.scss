@@ -154,6 +154,7 @@ body {
 // Header
 
 .header {
+	margin-top: 70px;
 	position: relative;
 	padding: 2em;
 	display: flex;
@@ -533,9 +534,17 @@ body {
 // section contact
 
 .contact {
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 	&__form {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
+		margin-bottom: 1.5em;
+
 		&-top,
 		&-bottom {
 			display: flex;
@@ -561,7 +570,6 @@ body {
 			text-transform: uppercase;
 			border: none;
 			border-radius: 8px;
-			max-width: 300px;
 			color: $pureWhite;
 			background-color: $mainColor;
 			cursor: pointer;
@@ -570,6 +578,104 @@ body {
 				background-color: rgba($pureWhite, $alpha: 0.1);
 			}
 		}
+
+		&-title {
+			@include contactFormTitle;
+		}
+		&-span {
+			font-weight: 700;
+		}
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		&-title {
+			@include contactFormTitle;
+		}
+		&-map {
+			padding: 0em 1em 2em;
+			iframe {
+				width: 100%;
+			}
+		}
+		&-address {
+			padding: 1em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border: 1.8px solid $mainColor;
+			background-color: transparent;
+			border-radius: 8px;
+			i {
+				margin-right: 1em;
+				font-size: 1.9rem;
+			}
+		}
+
+		&-link {
+			@include contactFormInfo;
+			&::before {
+				background-color: rgba($dark, $alpha: 0.05);
+			}
+		}
+	}
+}
+
+// footer
+.footer {
+	color: $pureWhite;
+	background-color: $dark;
+	.container {
+		padding: 4em 1em 2em;
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.4rem;
+		&-title {
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 2rem;
+		}
+		&-social {
+			margin: 2em 0;
+		}
+		&-link {
+			color: $pureWhite;
+			font-size: 5rem;
+			text-decoration: none;
+			transition: color 0.3s;
+			&:hover {
+				color: $light-white;
+			}
+		}
+		&-nav {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		&-menu {
+			font-size: 1.4rem;
+			padding: 0.8em 1.6em;
+			// margin: 0 0.5em 0 0.5em;
+			text-align: center;
+			color: $pureWhite;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: color 0.3s;
+			&:hover {
+				color: $light-white;
+			}
+		}
+	}
+	&__text {
+		text-align: center;
+		padding: 1em;
 	}
 }
 
@@ -654,6 +760,18 @@ body {
 					background-image: $heroShadow, url('../img/card4.jpg');
 				}
 			}
+		}
+	}
+	.contact {
+		&__boxes {
+			flex-direction: row;
+		}
+		&__form {
+			width: 40%;
+			margin-right: 2em;
+		}
+		&__box {
+			width: 60%;
 		}
 	}
 }

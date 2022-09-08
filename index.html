@@ -353,38 +353,82 @@
         <section id="contact" class="contact section-padding">
             <div class="container">
                 <h2 class="section-title">kontakt</h2>
-                <form action="" class="contact__form">
-                    <div class="contact__form-top">
-                        <label for="name" class="contact__form-label">Imię i nazwisko:</label>
-                        <input type="text" class="contact__form-input" id="name">
-                        <label for="email" class="contact__form-label">Adres e-mail:</label>
-                        <input type="text" class="contact__form-input" id="email">
-                        <label for="mobile" class="contact__form-label">Telefon:</label>
-                        <input type="text" class="contact__form-input" id="mobile" name="mobile">
+                <div class="contact__boxes">
+                    <form action="" class="contact__form">
+                        <p class="contact__form-title">umów się na <span class="contact__form-span">wizytę</span>
+                        </p>
+                        <div class="contact__form-top">
+                            <label for="name" class="contact__form-label">Imię i nazwisko:</label>
+                            <input type="text" class="contact__form-input" id="name">
+                            <label for="email" class="contact__form-label">Adres e-mail:</label>
+                            <input type="text" class="contact__form-input" id="email">
+                            <label for="mobile" class="contact__form-label">Telefon:</label>
+                            <input type="text" class="contact__form-input" id="mobile" name="mobile">
+                        </div>
+                        <div class="contact__form-bottom">
+                            <label for="msg" class="contact__form-label">Wiadomość:</label>
+                            <textarea id="msg" class="contact__form-textarea"></textarea>
+                        </div>
+                        <button class="contact__form-btn btn-special-animation" type="submit">wyślij</button>
+                    </form>
+                    <div class="contact__box">
+                        <p class="contact__box-title">tu mnie <span class="contact__form-span">znajdziesz</span></p>
+                        <div class="contact__box-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d632.1905645322091!2d17.93434776390054!3d50.66867453759638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47105308e20c7511%3A0x70106f5839c29033!2sKatowicka%2067B%2C%2046-020%20Opole!5e0!3m2!1spl!2spl!4v1662643456452!5m2!1spl!2spl"
+                                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="contact__box-address">
+                            <a class="contact__box-link btn-special-animation"><i
+                                    class="ti ti-physotherapist"></i>Gabinet REH-Kids Rehabilitacja
+                                dzieci i
+                                młodzieży</a>
+                            <a class="contact__box-link btn-special-animation"><i class="ti ti-gps"></i>Katowicka 67b
+                                (pawilon
+                                Olimp),
+                                46-020
+                                Opole</a>
+                            <a href="mailto:gosia178-1978@o2.pl" class="contact__box-link btn-special-animation"><i
+                                    class="ti ti-mail"></i>gosia178-1978@o2.pl</a>
+                            <a href="tel:+48 536 715 751" class="contact__box-link btn-special-animation "><i
+                                    class="ti ti-phone"></i>536 715
+                                751</a>
+                        </div>
                     </div>
-                    <div class="contact__form-bottom">
-                        <label for="msg" class="contact__form-label">Wiadomość:</label>
-                        <textarea id="msg" class="contact__form-textarea"></textarea>
-                    </div>
-                    <button class="contact__form-btn btn-special-animation" type="submit">wyślij</button>
-                </form>
+                </div>
             </div>
         </section>
-
-
-
     </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer__boxes">
                 <div class="footer__box">
-                    <h3 class="footer__box-title"></h3>
+                    <h3 class="footer__box-title">Rehabilitacja dzieci i młodzieży Małgorzata Cieśla</h3>
+                    <div class="footer__box-social">
+                        <a href="https://www.facebook.com/profile.php?id=100063478723934" class="footer__box-link"><i
+                                class="ti ti-brand-facebook"></i></a>
+                    </div>
+                    <div class="footer__box-nav">
+                        <a href="#aboutme" class="footer__box-menu">o mnie</a>
+                        <a href="#offer" class="footer__box-menu">oferta</a>
+                        <a href="#courses" class="footer__box-menu">kursy</a>
+                        <a href="#gallery" class="footer__box-menu">galeria</a>
+                        <a href="#contact" class="footer__box-menu">kontakt</a>
+                    </div>
+                    <!-- <div class="footer__box-nav footer__box-nav-desktop">
+                        <a href="#aboutme" class="footer__box-menu">o mnie</a>
+                        <a href="#offer" class="footer__box-menu">oferta</a>
+                        <a href="#courses" class="footer__box-menu">kursy</a>
+                        <a href="#gallery" class="footer__box-menu">galeria</a>
+                        <a href="#contact" class="footer__box-menu">kontakt</a>
+                    </div> -->
                 </div>
-
             </div>
         </div>
         <hr>
-        <p class="footer__bottom-text">&copy; <span class="footer__year"></span>| Szymon Cieśla</p>
+        <p class="footer__text">&copy; <span class="footer__year"></span>| Szymon Cieśla</p>
     </footer>
 
 
