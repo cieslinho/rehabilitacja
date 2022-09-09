@@ -15,6 +15,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	scroll-padding-top: 70px;
 }
 
 body {
@@ -344,6 +345,9 @@ body {
 		box-shadow: 0px 1px 8px -3.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		color: $dark;
+		&:nth-child(3) ~ & {
+			display: none;
+		}
 		&-img {
 			width: 100%;
 			object-fit: cover;
@@ -396,7 +400,6 @@ body {
 		background-color: $dark;
 		text-transform: uppercase;
 		cursor: pointer;
-
 		&::before {
 			background-color: rgba($pureWhite, $alpha: 0.1);
 		}
@@ -630,19 +633,34 @@ body {
 	.container {
 		padding: 4em 1em 2em;
 	}
+	&__boxes {
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba($pureWhite, $alpha: 0.1);
+		border-radius: 8px;
+	}
 	&__box {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		font-size: 1.4rem;
+		margin-bottom: 1.5em;
+		&:last-child {
+			display: none;
+			margin-bottom: 0;
+		}
 		&-title {
+			margin-bottom: 1em;
 			text-transform: uppercase;
 			text-align: center;
 			font-size: 2rem;
 		}
 		&-social {
-			margin: 2em 0;
+			align-self: center;
 		}
 		&-link {
 			color: $pureWhite;
@@ -650,14 +668,8 @@ body {
 			text-decoration: none;
 			transition: color 0.3s;
 			&:hover {
-				color: $light-white;
+				color: $mainColor;
 			}
-		}
-		&-nav {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
 		}
 		&-menu {
 			font-size: 1.4rem;
@@ -669,7 +681,7 @@ body {
 			text-transform: uppercase;
 			transition: color 0.3s;
 			&:hover {
-				color: $light-white;
+				color: $mainColor;
 			}
 		}
 	}
@@ -772,6 +784,25 @@ body {
 		}
 		&__box {
 			width: 60%;
+		}
+	}
+	.footer {
+		&__boxes {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+		&__box {
+			align-items: flex-start;
+			margin-right: 2em;
+			margin-bottom: 0;
+			&:last-child {
+				display: flex;
+				margin-right: 0;
+			}
+			&-menu {
+				padding-left: 0;
+			}
 		}
 	}
 }
